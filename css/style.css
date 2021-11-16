@@ -405,6 +405,22 @@ template {
   outline: none;
 }
 
+.search__input::-webkit-input-placeholder {
+  color: inherit;
+}
+
+.search__input:-ms-input-placeholder {
+  color: inherit;
+}
+
+.search__input::-ms-input-placeholder {
+  color: inherit;
+}
+
+.search__input::placeholder {
+  color: inherit;
+}
+
 .search__button {
   cursor: pointer;
   position: absolute;
@@ -424,6 +440,7 @@ template {
       -ms-flex-align: center;
           align-items: center;
   text-decoration: none;
+  color: inherit;
 }
 
 .user__avatar {
