@@ -5,7 +5,7 @@ const swiper = new Swiper(".swiper", {
   //effect: "flip",
   keyboard: {
     enabled: true,
-    onlyInViewport: false,
+    onlyInViewport: true,
   },
   // Navigation arrows
   navigation: {
