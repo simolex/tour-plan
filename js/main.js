@@ -3,7 +3,7 @@ const swiper = new Swiper(".swiper", {
   //direction: "vertical",
   loop: true,
   //effect: "flip",
-
+  autoHeight: true,
   // Navigation arrows
   navigation: {
     nextEl: ".slider-button--next",
