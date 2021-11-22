@@ -3,7 +3,10 @@ const swiper = new Swiper(".swiper", {
   //direction: "vertical",
   loop: true,
   //effect: "flip",
-  autoHeight: true,
+  keyboard: {
+    enabled: true,
+    onlyInViewport: false,
+  },
   // Navigation arrows
   navigation: {
     nextEl: ".slider-button--next",
