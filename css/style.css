@@ -529,7 +529,7 @@ template {
 
 .hotel {
   padding-top: 23px;
-  padding-bottom: 20px;
+  padding-bottom: 70px;
   font-family: 'Mulish', sans-serif;
 }
 
@@ -651,7 +651,7 @@ template {
 
 .swiper {
   width: 100%;
-  height: 450px;
+  height: 100%;
   position: relative;
   border-radius: 8px;
 }
@@ -677,6 +677,7 @@ template {
 
 .slider {
   width: 728px;
+  height: 450px;
 }
 
 .slider__image {
@@ -832,14 +833,18 @@ template {
 }
 
 .map-viewport {
-  width: 347px;
+  width: 350px;
   height: 213px;
   border-radius: 10px;
+  overflow: hidden;
 }
 
 @media (max-width: 1200px) {
   .container {
     max-width: 960px;
+  }
+  .slider {
+    width: 590px;
   }
 }
 
@@ -864,6 +869,33 @@ template {
     width: 133px;
   }
   .search__input {
+    width: 340px;
+  }
+  .hotel {
+    padding-bottom: 60px;
+  }
+  .hotel-grid {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .hotel-board {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .hotel__slider {
+    margin-bottom: 30px;
+  }
+  .slider {
+    width: 100%;
+  }
+  .booking {
+    width: 340px;
+  }
+  .map-viewport {
     width: 340px;
   }
 }
@@ -906,7 +938,7 @@ template {
   }
   .hotel {
     padding-top: 5px;
-    padding-bottom: 20px;
+    padding-bottom: 40px;
   }
   .hotel-info__about {
     width: 100%;
@@ -936,6 +968,26 @@ template {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
+  .hotel-board {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    min-height: 443px;
+  }
+  .hotel__slider {
+    margin-top: 18px;
+    margin-bottom: 20px;
+  }
+  .slider {
+    height: 370px;
+  }
+  .booking {
+    width: 100%;
+  }
+  .map-viewport {
+    width: 100%;
+  }
 }
 
 @media (max-width: 576px) {
@@ -947,6 +999,21 @@ template {
   }
   .logo {
     width: 99px;
+  }
+  .slider {
+    height: 243px;
+  }
+}
+
+@media (max-width: 420px) {
+  .hotel-board {
+    min-height: 403px;
+  }
+  .slider {
+    height: 179px;
+  }
+  .map-viewport {
+    height: 173px;
   }
 }
 /*# sourceMappingURL=style.css.map */
