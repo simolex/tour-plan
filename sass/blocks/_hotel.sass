@@ -28,6 +28,10 @@
     display: flex
     flex-wrap: wrap
     align-items: center
+  &-grid
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
 .offer
   font-weight: 600
   font-size: 10px
@@ -104,3 +108,86 @@
     &--prev
       left: 18px
       background-image: url("../img/arrow-prev.svg")
+// Booking section
+.booking
+  font-family: 'Nunito', sans-serif
+  font-weight: 400
+  width: 350px
+  min-height: 210px
+  background: $dark
+  border-radius: 8px
+  color: $light
+  padding: 29px 29px 26px 26px
+  // display: flex
+  // flex-direction: column
+  // justify-content: space-between
+  &__info
+    display: flex
+    //align-items: center
+    justify-content: space-between
+    margin-bottom: 9px
+  &__price
+    display: flex
+    flex-direction: column
+  &__start
+    font-size: 10px
+    line-height: 13.64px
+  &__value
+    font-weight: 800
+    font-size: 24px
+    line-height: 32.74px
+  &__per-room
+    font-size: 12px
+    line-height: 16.37px
+  &__factor
+    margin-left: 9px
+    font-size: 12px
+    line-height: 16.37px
+  &__room
+    // display: flex
+    // align-items: end
+    // justify-content: space-between
+    // flex-direction: column
+    margin-top: 4px 
+    //margin-bottom: 15px
+  &__text
+    //min-width: 80px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-bottom: 8px
+  &__phone-call
+    font-weight: 600
+    font-size: 18px
+    line-height: 24.55px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 17px
+  &__phone-number
+    display: flex
+    align-items: center
+    justify-content: space-between
+    text-decoration: none
+    color: inherit
+  &__phone-display
+    margin-left: 8px
+  &__button
+    cursor: pointer
+    font-weight: 600
+    font-size: 14px
+    line-height: 19px
+    width: 100%
+    min-height: 45px
+    //padding: 13px
+    //align-items: center
+    border-radius: 4px
+    background-color: $primary
+    color: $light
+    border: none
+
+
+
+
+
+    
