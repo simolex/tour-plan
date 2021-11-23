@@ -733,7 +733,7 @@ template {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 9px;
+  margin-bottom: 8px;
 }
 
 .booking__price {
@@ -754,7 +754,7 @@ template {
 .booking__value {
   font-weight: 800;
   font-size: 24px;
-  line-height: 32.74px;
+  line-height: 31px;
 }
 
 .booking__per-room {
@@ -893,10 +893,12 @@ template {
     width: 100%;
   }
   .booking {
+    padding: 29px 22px 26px 23px;
     width: 340px;
   }
   .map-viewport {
     width: 340px;
+    height: 210px;
   }
 }
 
@@ -1006,6 +1008,9 @@ template {
 }
 
 @media (max-width: 420px) {
+  .container {
+    max-width: 280px;
+  }
   .hotel-board {
     min-height: 403px;
   }
