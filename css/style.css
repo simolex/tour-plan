@@ -876,6 +876,7 @@ template {
 }
 
 .newsletter-title {
+  margin: 0;
   color: #FFFFFF;
   font-weight: 300;
   font-size: 24px;
@@ -900,8 +901,7 @@ template {
 
 .subscribe__input {
   position: absolute;
-  padding: 17px 33px;
-  padding-right: 60px;
+  padding: 17px 75px 17px 33px;
   width: 100%;
   height: 100%;
   font-weight: 300;
@@ -1006,6 +1006,12 @@ template {
     width: 340px;
     height: 210px;
   }
+  .newsletter {
+    padding: 92px 0;
+  }
+  .newsletter-container {
+    max-width: 700px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1096,6 +1102,21 @@ template {
   .map-viewport {
     width: 100%;
   }
+  .newsletter-container {
+    max-width: 576px;
+    width: 90%;
+  }
+  .newsletter-title {
+    font-size: 20px;
+    line-height: 25.1px;
+  }
+  .newsletter-title__strong {
+    font-size: 30px;
+    line-height: 37.65px;
+  }
+  .subscribe {
+    width: 280px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -1111,10 +1132,30 @@ template {
   .slider {
     height: 243px;
   }
+  .newsletter {
+    padding: 76px 0 83px 0;
+  }
+  .newsletter-container {
+    min-width: 280px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .newsletter__subscribe {
+    margin-top: 37px;
+  }
+  .subscribe {
+    width: 100%;
+  }
 }
 
 @media (max-width: 420px) {
-  .container {
+  .container,
+  .newsletter-container {
     max-width: 280px;
   }
   .hotel-board {
@@ -1125,6 +1166,9 @@ template {
   }
   .map-viewport {
     height: 173px;
+  }
+  .subscribe__input {
+    padding: 17px 75px 17px 20px;
   }
 }
 /*# sourceMappingURL=style.css.map */

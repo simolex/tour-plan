@@ -37,6 +37,10 @@
   .map-viewport
     width: 340px
     height: 210px
+  .newsletter
+    padding: 92px 0
+    &-container
+      max-width: 700px
 
 @media ( max-width:768px )
   .container
@@ -97,6 +101,18 @@
     width: 100%
   .map-viewport
     width: 100%
+  .newsletter
+    &-container
+      max-width: 576px
+      width: 90% 
+    &-title
+      font-size: 20px
+      line-height: 25.1px
+      &__strong
+        font-size: 30px
+        line-height: 37.65px
+  .subscribe
+    width: 280px   
 
 @media ( max-width: 576px )
   .container
@@ -108,9 +124,19 @@
     width: 99px
   .slider
     height: 243px
-
+  .newsletter
+    padding: 76px 0 83px 0
+    &-container
+      min-width: 280px
+      flex-direction: column
+      align-items: flex-start
+    &__subscribe
+      margin-top: 37px
+  .subscribe
+    width: 100%
 @media ( max-width: 420px )
-  .container
+  .container,
+  .newsletter-container
     max-width: 280px
   .hotel
     &-board
@@ -119,3 +145,6 @@
     height: 179px
   .map-viewport
     height: 173px
+  .subscribe
+    &__input
+      padding: 17px 75px 17px 20px
