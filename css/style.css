@@ -966,7 +966,7 @@ template {
   background-color: #fff;
   margin: 45px auto 0 auto;
   border-radius: 8px;
-  width: 730px;
+  max-width: 730px;
   padding: 0 62px 30px;
 }
 
@@ -1070,7 +1070,7 @@ template {
 
 .reviews-slider__review-text {
   margin: 0 auto 0;
-  width: 537px;
+  max-width: 537px;
   font-weight: 400;
   font-size: 12px;
   line-height: 19.2px;
@@ -1143,6 +1143,26 @@ template {
   }
   .newsletter-container {
     max-width: 700px;
+  }
+  .reviews {
+    padding-bottom: 60px;
+  }
+  .reviews__title {
+    font-size: 30px;
+    line-height: 37.65px;
+    margin-bottom: 50px;
+  }
+  .reviews-slider__item {
+    max-width: 479px;
+  }
+  .reviews-slider__item::before {
+    display: none;
+  }
+  .reviews-slider__item::after {
+    display: none;
+  }
+  .reviews-slider__review-text {
+    max-width: 455px;
   }
 }
 
@@ -1248,6 +1268,32 @@ template {
   }
   .subscribe {
     width: 280px;
+  }
+  .reviews {
+    padding-bottom: 50px;
+  }
+  .reviews__title {
+    font-size: 18px;
+    line-height: 22.59px;
+    margin-bottom: 42px;
+  }
+  .reviews-slider__item {
+    max-width: 280px;
+    padding: 0 30px 30px;
+  }
+  .reviews-slider__review-text {
+    max-width: 219px;
+  }
+  .reviews-slider__button {
+    top: 45px;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  .reviews-slider__button--next {
+    right: 35px;
+  }
+  .reviews-slider__button--prev {
+    left: 34px;
   }
 }
 
