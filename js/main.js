@@ -9,7 +9,7 @@ const swiper = new Swiper(".hotel-slider", {
   },
   // Navigation arrows
   navigation: {
-    nextEl: ".hotel-slider-button--next",
-    prevEl: ".hotel-slider-button--prev",
+    nextEl: ".hotel-slider__button--next",
+    prevEl: ".hotel-slider__button--prev",
   },
 });
