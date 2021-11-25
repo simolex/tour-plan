@@ -1083,13 +1083,13 @@ template {
 }
 
 .activities {
-  padding: 60px 0 98px 0;
+  padding: 60px 0px 98px 0px;
   font-family: Mulish;
   font-style: normal;
 }
 
 .activities__title {
-  margin-top: 0;
+  margin-top: 0px;
   margin-bottom: 57px;
   font-weight: 700;
   font-size: 24px;
@@ -1458,7 +1458,7 @@ template {
     padding: 0 50px;
   }
   .activities {
-    padding: 41px 0 60px 0;
+    padding: 39px 0 60px 0;
   }
   .activities__card {
     margin: 0 auto 20px auto;
@@ -1507,9 +1507,9 @@ template {
     letter-spacing: -0.35px;
   }
   .activities__title {
-    margin-bottom: 37px;
+    margin-bottom: 35px;
     font-size: 18px;
-    line-height: 22.59px;
+    line-height: 23px;
   }
   .activities__card:nth-child(2) {
     margin-bottom: 28px;
