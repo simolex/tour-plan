@@ -18,6 +18,9 @@
 
     <script src="js/swiper-bundle.min.js" defer></script>
     <script src="js/main.js" defer></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" defer></script>
+    <script src="js/parallax.min.js" defer></script>
   </head>
   <body>
     <header class="navbar">
@@ -229,7 +232,12 @@
       </div>
     </section>
     <!-- /.hotel -->
-    <section class="newsletter">
+    <section
+      class="newsletter"
+      data-parallax="scroll"
+      data-image-src="/img/newsletter-bg.jpg"
+      data-speed="0.3"
+    >
       <div class="newsletter-container">
         <h2 class="newsletter-title">
           subscribe to our
