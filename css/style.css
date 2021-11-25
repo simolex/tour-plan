@@ -1511,6 +1511,9 @@ template {
     font-size: 18px;
     line-height: 22.59px;
   }
+  .activities__card:nth-child(2) {
+    margin-bottom: 28px;
+  }
   .card {
     height: 255px;
   }
