@@ -1285,16 +1285,14 @@ template {
     width: 280px;
   }
   .reviews-slider__item {
-    max-width: 280px;
+    max-width: 430px;
     padding: 0 27px 36px 31px;
   }
   .reviews-slider__profile {
     margin-bottom: 33px;
   }
   .reviews-slider__review-text {
-    max-width: 219px;
-    text-align: left;
-    letter-spacing: -0.35px;
+    max-width: 320px;
   }
 }
 
@@ -1336,6 +1334,12 @@ template {
   .reviews {
     padding-bottom: 50px;
   }
+  .reviews-slider__item {
+    max-width: 320px;
+  }
+  .reviews-slider__review-text {
+    max-width: 219px;
+  }
   .reviews__title {
     font-size: 24px;
     line-height: 30px;
@@ -1376,6 +1380,10 @@ template {
   }
   .reviews-slider__button--prev {
     left: 34px;
+  }
+  .reviews-slider__review-text {
+    text-align: left;
+    letter-spacing: -0.35px;
   }
 }
 /*# sourceMappingURL=style.css.map */

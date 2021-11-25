@@ -136,14 +136,12 @@
   .reviews
     &-slider
       &__item
-        max-width: 280px
+        max-width: 430px
         padding: 0 27px 36px 31px
       &__profile
         margin-bottom: 33px
       &__review-text
-        max-width: 219px
-        text-align: left
-        letter-spacing: -0.35px
+        max-width: 320px
 @media ( max-width: 576px )
   .container
     min-width: 280px
@@ -169,6 +167,11 @@
     width: 100%
   .reviews
     padding-bottom: 50px
+    &-slider
+      &__item
+        max-width: 320px
+      &__review-text
+        max-width: 219px
     &__title
       font-size: 24px
       line-height: 30px
@@ -208,3 +211,6 @@
           //margin-left: -65px //Artem
           //transform: translate(-50%, 0) //Artem
           left: 34px //my
+      &__review-text
+        text-align: left
+        letter-spacing: -0.35px
