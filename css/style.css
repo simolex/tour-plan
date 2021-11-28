@@ -1197,8 +1197,8 @@ template {
 .packages-wrapper {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[auto-fit];
-      grid-template-columns: repeat(auto-fit, 1fr);
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: 500px;
   grid-gap: 30px;
 }
@@ -1804,6 +1804,13 @@ template {
   }
 }
 
+@media (max-width: 992px) {
+  .packages-wrapper {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 768px) {
   .card-sale__description {
     line-height: 120%;
@@ -1813,15 +1820,26 @@ template {
     line-height: 38px;
     margin-bottom: 40px;
   }
+  .packages-wrapper {
+    grid-gap: 20px;
+  }
 }
 
 @media (max-width: 576px) {
   .card-sale--primary {
     display: none;
   }
+  .packages {
+    padding-top: 30px;
+    padding-bottom: 50px;
+  }
   .packages__title {
     font-size: 24px;
     line-height: 30px;
+  }
+  .packages-wrapper {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
   }
 }
 /*# sourceMappingURL=style.css.map */

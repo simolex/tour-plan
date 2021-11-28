@@ -4,7 +4,10 @@
          &__description
             line-height: 140%
 
-//@media ( max-width: 992px )
+@media ( max-width: 992px )
+   .packages
+      &-wrapper
+         grid-template-columns: repeat(2, 1fr)
 @media ( max-width: 768px )
    .card
       &-sale
@@ -15,13 +18,18 @@
          font-size: 30px
          line-height: 38px
          margin-bottom: 40px
-
+      &-wrapper
+         grid-gap: 20px
 @media ( max-width: 576px )
    .card
       &-sale
          &--primary
             display: none
    .packages
+      padding-top: 30px
+      padding-bottom: 50px
       &__title
          font-size: 24px
          line-height: 30px
+      &-wrapper
+         grid-template-columns: 1fr
