@@ -1171,6 +1171,279 @@ template {
   padding: 7px 21px;
 }
 
+.packages {
+  font-family: Mulish;
+  font-style: normal;
+  padding-top: 40px;
+  padding-bottom: 70px;
+}
+
+.packages__title {
+  margin-top: 0;
+  margin-bottom: 65px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 45px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.packages-wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 500px;
+  grid-gap: 30px;
+}
+
+.card-sale {
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #0A223D;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (250px)[2];
+  -ms-grid-columns: 1fr;
+      grid-template: repeat(2, 250px)/1fr;
+}
+
+.card-sale--primary {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/ span 2;
+  -ms-grid-rows: 1fr;
+  -ms-grid-columns: 365px 1fr;
+      grid-template: 1fr / 365px 1fr;
+}
+
+.card-sale__preview {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / span 1;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / span 1;
+  overflow: hidden;
+  position: relative;
+}
+
+.card-sale__image {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  -o-object-position: left bottom;
+     object-position: left bottom;
+  -o-object-fit: cover;
+     object-fit: cover;
+  left: 0;
+  bottom: 0;
+}
+
+.card-sale__offer {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  position: absolute;
+  left: 0;
+  top: 26px;
+  font-size: 8px;
+  line-height: 10.04px;
+}
+
+.card-sale__offer--primary {
+  font-size: 12px;
+  line-height: 15.06px;
+  padding: 8px 12px;
+}
+
+.card-sale__info {
+  z-index: 1;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / span 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / span 1;
+  background-color: #0A223D;
+  color: #FFFFFF;
+  padding: 30px 21px 25px 32px;
+}
+
+.card-sale__info--primary {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / span 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / span 1;
+  padding: 46px 21px 30px 43px;
+}
+
+.card-sale__content {
+  width: 100%;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 46px 1fr 40px;
+  -ms-grid-columns: 1fr;
+      grid-template: 46px 1fr 40px / 1fr;
+}
+
+.card-sale__content--primary {
+  -ms-grid-rows: 63px 1fr 40px;
+  -ms-grid-columns: 1fr;
+      grid-template: 63px 1fr 40px / 1fr;
+}
+
+.card-sale__up-side {
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / span 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / span 1;
+}
+
+.card-sale__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / span 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / span 1;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.card-sale__purchase {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3 / span 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / span 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.card-sale__stars {
+  margin-bottom: 5px;
+}
+
+.card-sale__hotel-name {
+  margin: 0;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22.59px;
+}
+
+.card-sale__description {
+  max-height: 180px;
+  margin-top: 0px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 160.6%;
+  overflow-y: scroll;
+}
+
+.card-sale__description::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+.card-sale__description::-webkit-scrollbar-thumb {
+  background: #233850;
+  border-radius: 3px;
+}
+
+.card-sale__description::-webkit-scrollbar-track {
+  background: #0A223D;
+}
+
+.card-sale__description::-webkit-scrollbar-button {
+  cursor: pointer;
+}
+
+.card-sale__description body {
+  scrollbar-face-color: #233850;
+  scrollbar-track-color: #0A223D;
+}
+
+.card-sale__old-price {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17.57px;
+  -webkit-text-decoration-line: line-through;
+          text-decoration-line: line-through;
+}
+
+.card-sale__price {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30.12px;
+}
+
+.card-sale__button {
+  cursor: pointer;
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  color: inherit;
+  background-color: #EC1F46;
+  padding: 11px 27px;
+  border-radius: 4px;
+  border: none;
+}
+
+.book-room {
+  min-height: 67px;
+}
+
+.book-room__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.book-room__text:not(:last-child) {
+  margin-bottom: 11px;
+}
+
+.book-room__factor {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  margin-left: 14px;
+}
+
+.book-room__icon {
+  width: 14px;
+  width: 14px;
+}
+
 @media (max-width: 1200px) {
   .container {
     max-width: 960px;
