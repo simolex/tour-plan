@@ -1147,6 +1147,8 @@ template {
   position: absolute;
   left: 0;
   top: 0;
+  right: 0;
+  bottom: 0;
   min-width: 100%;
   min-height: 100%;
   -o-object-fit: cover;
@@ -1232,6 +1234,7 @@ template {
   grid-row: 1 / span 1;
   overflow: hidden;
   position: relative;
+  background-color: #007ADF;
 }
 
 .card-sale__image {
@@ -1283,6 +1286,7 @@ template {
   -ms-grid-column-span: 1;
   grid-column: 2 / span 1;
   padding: 46px 21px 30px 43px;
+  margin-left: -1px;
 }
 
 .card-sale__content {
