@@ -1815,20 +1815,22 @@ template {
   .card-sale__description {
     line-height: 120%;
   }
+  .card-sale--primary {
+    display: none;
+  }
   .packages__title {
     font-size: 30px;
     line-height: 38px;
     margin-bottom: 40px;
   }
   .packages-wrapper {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
     grid-gap: 20px;
   }
 }
 
 @media (max-width: 576px) {
-  .card-sale--primary {
-    display: none;
-  }
   .packages {
     padding-top: 30px;
     padding-bottom: 50px;
@@ -1836,10 +1838,6 @@ template {
   .packages__title {
     font-size: 24px;
     line-height: 30px;
-  }
-  .packages-wrapper {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
   }
 }
 /*# sourceMappingURL=style.css.map */
