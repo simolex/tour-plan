@@ -1177,6 +1177,26 @@ template {
   padding: 7px 21px;
 }
 
+.footer {
+  font-family: Mulish;
+  font-style: normal;
+  background-color: #0A223D;
+  color: #FFFFFF;
+  padding: 108px 0 46px;
+}
+
+.footer__ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.footer__item {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 160%;
+}
+
 @media (max-width: 1200px) {
   .container {
     max-width: 960px;
