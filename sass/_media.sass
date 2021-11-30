@@ -6,6 +6,9 @@
   .card
     width: 230px
     height: 230px
+  .footer
+    &__input
+      flex-basis: 100%
 
 @media ( max-width:  992px )
   .container
@@ -67,7 +70,7 @@
         &--prev
           left: 0
   .activities
-    padding-bottom: 70px
+    padding-bottom: 48px
     &-wrapper
       flex-wrap: wrap
     &__card
@@ -75,6 +78,67 @@
   .card
     width: 339px
     height: 255px
+  
+  .footer
+    padding-top: 73px
+    padding-bottom: 33px
+    &-wrapper
+      grid-template-columns: repeat(3, minmax(min-content, 1fr)) 40px 150px 
+      grid-auto-rows: minmax(30px, min-content)
+      grid-gap: 10px
+    &__title
+      &--inline
+        margin-right: 44px
+        margin-left: -18px
+      &--mb-32
+        margin-bottom: 35px
+    &__logo
+      width: 96px
+      grid-row: 1/ span 1
+    &__social
+      &-network
+        grid-row: 1/ span 1
+        grid-column: 2/ span 3
+        align-self: center
+        margin-top: 12px
+        margin-left: 38px
+    &__categories
+      grid-row: 3/ span 1
+      grid-column: 1/ span 1
+    &__additional
+      grid-row: 3/ span 1
+      grid-column: 2/ span 2
+      margin-left: 35px
+    &__legal
+      grid-row: 3 / span 1
+      grid-column: 4/ span 2
+      margin-right: 10px
+    &__contact
+      &-details
+        grid-row: 5
+        grid-column: 1/ span 5
+      &-form
+        grid-row: 7
+        grid-column: 1/ span 4
+        &--ml-5
+          margin-top: -10px
+          margin-left: 0
+    &__input
+      flex-basis: 48%
+    &__item
+      &--mb-2
+        padding-left: 7px
+      &--bottom
+        padding: 0 2px
+    &__bottom
+      &-links
+        grid-row: 9
+        grid-column: 1 / span 3
+         //align-self: end
+        justify-self: start
+      &-image
+        grid-row: 9
+        grid-column: 5 / span 1
 
 @media ( max-width:768px )
   .container
@@ -161,6 +225,15 @@
     height: 230px
     //max-width: 278px
     //min-width: 249px
+  .footer
+    &__social
+      &-network
+        grid-row: 1/ span 1
+        grid-column: 2/ span 4
+        align-self: senter
+        justify-self: end
+        margin-top: 12px
+        margin-left: 38px
 
 @media ( max-width: 576px )
   .container
