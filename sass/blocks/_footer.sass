@@ -76,6 +76,11 @@
       padding: 0
       margin: 0
       list-style-type: none
+      &--bottom
+         display: flex
+         flex-direction: row
+         align-items: center
+         //justify-content: space-between
    &__item
       display: flex
       align-items: flex-start
@@ -145,3 +150,16 @@
       font-size: 12px
       line-height: 15px
       color: #E0E0E0
+   &__bottom
+      &-links
+         grid-row: 6 / span 1
+         grid-column: 2 / span 2
+         align-self: end
+         justify-self: center
+      &-image
+         grid-row: 6 / span 1
+         grid-column: 4 / span 1
+         width: 136px
+         align-self: end
+         justify-self: end
+         margin-bottom: 3px
