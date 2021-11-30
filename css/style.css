@@ -1411,6 +1411,10 @@ template {
       flex-basis: 48%;
 }
 
+.footer__input:focus, .footer__input:focus-visible {
+  outline: none;
+}
+
 .footer__input::-webkit-input-placeholder {
   font-weight: 400;
   font-size: 12px;
@@ -1451,6 +1455,10 @@ template {
   width: 100%;
   height: 123px;
   resize: none;
+}
+
+.footer__message:focus, .footer__message:focus-visible {
+  outline: none;
 }
 
 .footer__message::-webkit-input-placeholder {
