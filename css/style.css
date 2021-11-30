@@ -1199,7 +1199,7 @@ template {
 }
 
 .footer__logo {
-  width: 166px;
+  width: 153px;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -1264,6 +1264,8 @@ template {
   -ms-grid-column: 4;
   -ms-grid-column-span: 1;
   grid-column: 4/ span 1;
+  -ms-grid-column-align: end;
+      justify-self: end;
 }
 
 .footer__contact-details {
@@ -1275,6 +1277,10 @@ template {
   grid-column: 1/ span 2;
 }
 
+.footer__contact-details--mt-10 {
+  margin-top: 10px;
+}
+
 .footer__contact-form {
   -ms-grid-row: 4;
   -ms-grid-row-span: 1;
@@ -1284,8 +1290,19 @@ template {
   grid-column: 3/ span 2;
 }
 
+.footer__contact-form--ml-5 {
+  margin-left: 5px;
+}
+
 .footer__contact-icon-wrapper {
   min-width: 40px;
+  height: 27px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .footer__form {
@@ -1314,7 +1331,15 @@ template {
 
 .footer__title--inline {
   margin-bottom: 0;
-  margin-right: 43px;
+  margin-right: 48px;
+}
+
+.footer__title--mb-25 {
+  margin-bottom: 25px;
+}
+
+.footer__title--mb-32 {
+  margin-bottom: 32px;
 }
 
 .footer__ul {
@@ -1337,7 +1362,7 @@ template {
 }
 
 .footer__item--mb-2 {
-  margin-bottom: 20px;
+  margin-bottom: 17px;
 }
 
 .footer__link {
