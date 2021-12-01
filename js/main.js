@@ -35,4 +35,20 @@ const menu = document.querySelector(".navbar-bottom");
 
 buttonBurger.addEventListener("click", (e) => {
   menu.classList.toggle("navbar-bottom--visible");
+  console.log("click");
 });
+
+const search = () => {
+  const visibleSearch = document.querySelector(".navbar__search--mobile--visible > input");
+  const hiddenSearch = document.querySelector(".navbar__search--mobile--hidden > input");
+
+  visibleSearch.addEventListener("input", (event) => {
+    hiddenSearch.value = event.target.value;
+  });
+
+  hiddenSearch.addEventListener("input", (event) => {
+    visibleSearch.value = event.target.value;
+  });
+};
+
+search();

@@ -145,28 +145,19 @@
     max-width: 576px
     width: 90%
   body
-    padding-top: 78px
+    padding-top: 75px
   .navbar
     &-top
       padding: 28px 0
-    &__search, &__user
-      &--mobile
-        &--hidden
-          display: none
-        &--visible
-          display: flex
-    &__user
-      flex-direction: column
-      justify-content: center
-    &__search
-      margin-left: 0
     &-bottom
       display: none
       position: fixed
-      width: 420px
-      top: 78px
+      // width: 420px
+      top: 75px
+      left: 0
       right: 0
-      padding-top: 30px
+      bottom: 0
+      padding-top: 10px
       &--visible
         display: block
     &--mobile
@@ -177,14 +168,38 @@
         right: 0
         z-index: 100
     &-menu
+      padding: 22px 16px
       flex-direction: column
       align-items: center
       &__item
-        margin-bottom: 20px
         &--mobile
           &--visible
             display: block
-
+      &__link
+        padding: 10px 0
+        display: block
+    &__user
+      flex-direction: column
+      justify-content: center
+      margin-bottom: 6px
+      &--mobile
+        &--hidden
+          display: none
+        &--visible
+          display: flex
+    &__search
+      margin-left: 0
+      &--mobile
+        &--hidden
+          display: none
+        &--visible
+          display: flex
+          margin: 20px 0 30px
+  .search
+    &__input
+      width: 100%
+      max-width: 350px
+      padding-left: 15px
   .menu
     &-burger
       //cursor: pointer
@@ -433,7 +448,6 @@
       margin-bottom: 28px
   .card
     height: 255px
-
   .footer
     padding-top: 46px
     padding-bottom: 36px
@@ -505,3 +519,6 @@
       order: 2
     &__message
       margin-bottom: 15px
+// @media ( max-width: 320px )
+//   .container
+//     margin: 0 20px
