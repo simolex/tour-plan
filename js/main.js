@@ -29,3 +29,10 @@ const reviewsSlider = new Swiper(".reviews-slider", {
     prevEl: ".reviews-slider__button--prev",
   },
 });
+
+const buttonBurger = document.querySelector(".menu-burger");
+const menu = document.querySelector(".navbar-bottom");
+
+buttonBurger.addEventListener("click", (e) => {
+  menu.classList.toggle("navbar-bottom--visible");
+});

@@ -144,27 +144,69 @@
   .container
     max-width: 576px
     width: 90%
+  body
+    padding-top: 78px
   .navbar
     &-top
       padding: 28px 0
-    &__search, &-menu, &__user
+    &__search, &__user
+      &--mobile
+        &--hidden
+          display: none
+        &--visible
+          display: flex
+    &__user
+      flex-direction: column
+      justify-content: center
+    &__search
+      margin-left: 0
+    &-bottom
       display: none
+      position: fixed
+      width: 420px
+      top: 78px
+      right: 0
+      padding-top: 30px
+      &--visible
+        display: block
+    &--mobile
+      &--fixed
+        position: fixed
+        top: 0
+        left: 0
+        right: 0
+        z-index: 100
+    &-menu
+      flex-direction: column
+      align-items: center
+      &__item
+        margin-bottom: 20px
+        &--mobile
+          &--visible
+            display: block
 
-  .menu-burger
-    //cursor: pointer
-    display: flex
-    width: 16px
-    height: 11px
-    padding: 0
-    align-items: center
-    justify-content: space-between
-    flex-direction: column
-    border: none
-    background-color: #fff
-    &__line
+  .menu
+    &-burger
+      //cursor: pointer
+      display: flex
       width: 16px
-      height: 1px
-      background-color: $text-color
+      height: 11px
+      padding: 0
+      align-items: center
+      justify-content: space-between
+      flex-direction: column
+      border: none
+      background-color: #fff
+      &__line
+        width: 16px
+        height: 1px
+        background-color: $text-color
+  .user
+    &__name
+      &--light
+        color: inherit
+        margin-top: 10px
+        margin-left: 0
   .hotel
     padding-top: 5px
     padding-bottom: 40px
