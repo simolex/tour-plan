@@ -1,0 +1,35 @@
+@media ( max-width: 1200px )
+   .card
+      &-sale
+         &__description
+            line-height: 140%
+
+@media ( max-width: 992px )
+   .packages
+      &-wrapper
+         grid-template-columns: repeat(2, 1fr) 
+         //grid-gap: 30px
+@media ( max-width: 768px )
+   .card
+      &-sale
+         &__description
+            line-height: 120%
+         &--primary
+            display: none
+   .packages
+      &__title
+         font-size: 30px
+         line-height: 38px
+         margin-bottom: 40px
+      &-wrapper
+         grid-template-columns: 1fr
+         grid-gap: 20px
+      
+@media ( max-width: 576px ) 
+   .packages
+      padding-top: 30px
+      padding-bottom: 50px
+      &__title
+         font-size: 24px
+         line-height: 30px
+ 
