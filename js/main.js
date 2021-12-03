@@ -32,10 +32,11 @@ const reviewsSlider = new Swiper(".reviews-slider", {
 
 const buttonBurger = document.querySelector(".menu-burger");
 const menu = document.querySelector(".navbar-bottom");
+const mainBody = document.querySelector(".body");
 
-buttonBurger.addEventListener("click", (e) => {
+buttonBurger.addEventListener("click", () => {
   menu.classList.toggle("navbar-bottom--visible");
-  console.log("click");
+  mainBody.classList.toggle("body--mobile--visible");
 });
 
 const search = () => {

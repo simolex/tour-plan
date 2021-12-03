@@ -1782,8 +1782,11 @@ img {
     max-width: 576px;
     width: 90%;
   }
-  body {
-    padding-top: 75px;
+  .body {
+    padding-top: 74px;
+  }
+  .body--mobile--visible {
+    position: fixed;
   }
   .navbar-top {
     padding: 28px 0;
@@ -1791,11 +1794,18 @@ img {
   .navbar-bottom {
     display: none;
     position: fixed;
-    top: 75px;
+    top: 74px;
     left: 0;
     right: 0;
     bottom: 0;
     padding-top: 10px;
+    height: calc(100% - 74px);
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .navbar-bottom::-webkit-scrollbar {
+    display: none;
   }
   .navbar-bottom--visible {
     display: block;
