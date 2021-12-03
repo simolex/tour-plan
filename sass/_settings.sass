@@ -11,3 +11,49 @@
   margin: auto
 img
   max-width: 100%
+.input
+  background-color: #FFF
+  color: $dark
+  border-radius: 4px
+  padding: 0 23px
+  height: 50px
+  border: none
+  &:focus, &:focus-visible
+    outline: none
+  &::placeholder
+    font-weight: 400
+    font-size: 12px
+    line-height: 15px
+    color: $footer-text-color
+.message
+  background-color: #fff
+  color: $dark
+  border-radius: 4px
+  padding: 18px 23px
+  border: none
+  resize: none
+  &:focus, &:focus-visible
+    outline: none
+  //TODO Scroll
+  &::placeholder
+    font-weight: 400
+    font-size: 12px
+    line-height: 15px
+    color: $footer-text-color
+.button
+  border: none
+  cursor: pointer
+  min-width: 160px
+  min-height: 50px
+  background-color: $primary
+  color: $light
+  border-radius: 4px
+  padding: 18px
+  font-weight: 700
+  font-size: 12px
+  line-height: 15px
+.form
+  display: flex
+  align-items: center
+  justify-content: space-between
+  flex-wrap: wrap
