@@ -346,9 +346,32 @@ template {
           box-sizing: border-box;
 }
 
-body {
+.body {
   color: #333333;
   background-color: #F5FAFE;
+}
+
+.body::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.body::-webkit-scrollbar-thumb {
+  background: #BDBDBD;
+  border-radius: 4px;
+}
+
+.body::-webkit-scrollbar-track {
+  background: #F5FAFE;
+}
+
+.body::-webkit-scrollbar-button {
+  cursor: pointer;
+}
+
+.body body {
+  scrollbar-face-color: #BDBDBD;
+  scrollbar-track-color: #F5FAFE;
 }
 
 .container {
