@@ -1832,7 +1832,6 @@ img {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin-bottom: 6px;
   }
   .navbar__user--mobile--hidden {
     display: none;
@@ -1841,6 +1840,7 @@ img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    padding-bottom: 6px;
   }
   .navbar__search {
     margin-left: 0;
@@ -1857,7 +1857,6 @@ img {
   .search__input {
     width: 100%;
     max-width: 350px;
-    padding-left: 15px;
   }
   .menu-burger {
     display: -webkit-box;
