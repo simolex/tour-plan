@@ -29,3 +29,13 @@ const modalForm = () => {
 };
 
 modalForm();
+
+// useEffect(() => {
+//   const close = (e) => {
+//     if (e.keyCode === 27) {
+//       props.onCloseModal();
+//     }
+//   };
+//   window.addEventListener("keydown", close);
+//   return () => window.removeEventListener("keydown", close);
+// }, []);

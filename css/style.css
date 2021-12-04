@@ -2227,6 +2227,7 @@ template {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   z-index: 333;
+  width: 100%;
   max-width: 478px;
   min-height: 487px;
   -webkit-transition: opacity 0.5s;
@@ -2887,6 +2888,10 @@ template {
     -ms-grid-column-align: center;
         justify-self: center;
   }
+  .modal__dialog {
+    padding: 33px 55px;
+    max-width: 412px;
+  }
 }
 
 @media (max-width: 420px) {
@@ -3061,6 +3066,10 @@ template {
   }
   .footer__message {
     margin-bottom: 15px;
+  }
+  .modal__dialog {
+    padding: 33px 20px;
+    max-width: 320px;
   }
 }
 
