@@ -25,16 +25,16 @@ try {
     $mail->isSMTP();   
     $mail->CharSet = "UTF-8";
     $mail->SMTPAuth   = true;
-    //$mail->SMTPDebug = 2;
+    $mail->SMTPDebug = 2;
     $mail->Debugoutput = function($str, $level) {$GLOBALS['status'][] = $str;};
 
     // Настройки вашей почты
-    $mail->Host       = 'smtp.yandex.ru'; // SMTP сервера вашей почты
-    $mail->Username   = 'admin@simolex.ru'; // Логин на почте
-    $mail->Password   = 'password'; // Пароль на почте
+    $mail->Host       = 'smtp.gmail.com'; // SMTP сервера вашей почты
+    $mail->Username   = 'besttour1614@gmail.com'; // Логин на почте
+    $mail->Password   = '4Uf-Bxx-eKs-A88'; // Пароль на почте
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
-    $mail->setFrom('admin@simolex.ru', 'Best Tour Plan'); // Адрес самой почты и имя отправителя
+    $mail->setFrom('besttour1614@gmail.com', 'Best Tour'); // Адрес самой почты и имя отправителя
 
     // Получатель письма
     $mail->addAddress('simolex@yandex.ru');  
@@ -68,5 +68,5 @@ try {
 }
 
 // Отображение результата
-//echo json_encode(["result" => $result, "resultfile" => $rfile, "status" => $status]);
-header('Location: thankyou.html');
+echo json_encode(["result" => $result, "resultfile" => $rfile, "status" => $status]);
+//header('Location: thankyou.html');
