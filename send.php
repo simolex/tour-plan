@@ -4,8 +4,10 @@ require 'phpmailer/PHPMailer.php';
 require 'phpmailer/SMTP.php';
 require 'phpmailer/Exception.php';
 $secret = require('../../.smtp.php');
+//$secret = require('../../../.credital/.smtp.php');
 
 // Переменные, которые отправляет пользователь
+$type = $_POST['type'];
 $name = $_POST['name'];
 $phone = $_POST['phone'];
 $message = $_POST['message'];
@@ -20,6 +22,8 @@ $body = "
 <b>Сообщение:</b><br>$message
 ";
 
+var_dump($type);
+die();
 // Настройки PHPMailer
 $mail = new PHPMailer\PHPMailer\PHPMailer();
 try {

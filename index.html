@@ -465,7 +465,8 @@
           subscribe to our
           <span class="newsletter-title__strong">Newsletter</span>
         </h2>
-        <form action="#" class="subscribe newsletter__subscribe">
+        <form action="send.php" method="post" class="subscribe newsletter__subscribe">
+          <input type="hidden" name="type" value="newsletter" />
           <input type="text" class="subscribe__input" placeholder="Your email address" />
           <button class="subscribe__button">Send</button>
         </form>
@@ -736,6 +737,7 @@
           <div class="footer__contact-form footer__contact-form--ml-5">
             <h3 class="footer__title footer__title--mb-32">Send us a message</h3>
             <form action="send.php" method="post" class="footer__form">
+              <input type="hidden" name="type" value="feedback" />
               <input
                 type="text"
                 class="input footer__input"
