@@ -744,7 +744,7 @@
 
           <div class="footer__contact-form footer__contact-form--ml-5">
             <h3 class="footer__title footer__title--mb-32">Send us a message</h3>
-            <form action="send.php" method="post" class="footer__form">
+            <form action="send.php" method="post" class="form footer__form">
               <input type="hidden" name="type" value="feedback" />
               <input
                 type="text"
@@ -758,7 +758,11 @@
                 placeholder="Phone Number*"
                 name="phone"
               />
-              <textarea class="footer__message" placeholder="Message" name="message"></textarea>
+              <textarea
+                class="message footer__message"
+                placeholder="Message"
+                name="message"
+              ></textarea>
               <button class="button footer__button" type="submit">Send</button>
               <span class="footer__info">* Required Fields</span>
             </form>
