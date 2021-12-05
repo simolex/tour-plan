@@ -32,14 +32,18 @@ const reviewsSlider = new Swiper(".reviews-slider", {
 
 const buttonBurger = document.querySelector(".menu-burger");
 const menu = document.querySelector(".navbar-bottom");
-const mainBody = document.querySelector(".body");
+
+const toggleFixerBody = () => {
+  const mainBody = document.querySelector(".body");
+  mainBody.classList.toggle("body--fixed");
+};
 
 buttonBurger.addEventListener("click", () => {
   menu.classList.toggle("navbar-bottom--visible");
-  mainBody.classList.toggle("body--mobile--visible");
+  toggleFixerBody();
 });
 
-const search = () => {
+const unionSearchInputs = () => {
   const visibleSearch = document.querySelector(".navbar__search--mobile--visible > input");
   const hiddenSearch = document.querySelector(".navbar__search--mobile--hidden > input");
 
@@ -52,4 +56,4 @@ const search = () => {
   });
 };
 
-search();
+unionSearchInputs();

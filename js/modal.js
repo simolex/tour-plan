@@ -17,6 +17,7 @@ const modalForm = () => {
     event.preventDefault();
     modalContainer.querySelector(".modal__overlay").classList.add("modal__overlay--visible");
     modalContainer.querySelector(".modal__dialog").classList.add("modal__dialog--visible");
+    toggleFixerBody();
   };
 
   const CloseModal = (event) => {
@@ -25,17 +26,8 @@ const modalForm = () => {
     event.preventDefault();
     modalContainer.querySelector(".modal__overlay").classList.remove("modal__overlay--visible");
     modalContainer.querySelector(".modal__dialog").classList.remove("modal__dialog--visible");
+    toggleFixerBody();
   };
 };
 
 modalForm();
-
-// useEffect(() => {
-//   const close = (e) => {
-//     if (e.keyCode === 27) {
-//       props.onCloseModal();
-//     }
-//   };
-//   window.addEventListener("keydown", close);
-//   return () => window.removeEventListener("keydown", close);
-// }, []);

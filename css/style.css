@@ -374,6 +374,10 @@ template {
   scrollbar-track-color: #F5FAFE;
 }
 
+.body--fixed {
+  position: fixed;
+}
+
 .container {
   max-width: 1110px;
   margin: auto;
@@ -2507,6 +2511,21 @@ template {
   }
 }
 
+@media (max-height: 487px) {
+  .modal__dialog {
+    border-radius: 4px;
+    min-height: 0;
+    height: 100vh;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .modal__dialog::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 @media (max-width: 768px) {
   .container {
     max-width: 576px;
@@ -2514,9 +2533,6 @@ template {
   }
   .body {
     padding-top: 74px;
-  }
-  .body--mobile--visible {
-    position: fixed;
   }
   .navbar-top {
     padding: 28px 0;
