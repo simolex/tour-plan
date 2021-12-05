@@ -17,7 +17,7 @@ const modalForm = () => {
     event.preventDefault();
     modalContainer.querySelector(".modal__overlay").classList.add("modal__overlay--visible");
     modalContainer.querySelector(".modal__dialog").classList.add("modal__dialog--visible");
-    toggleFixerBody();
+    //toggleFixerBody();
   };
 
   const CloseModal = (event) => {
@@ -26,8 +26,23 @@ const modalForm = () => {
     event.preventDefault();
     modalContainer.querySelector(".modal__overlay").classList.remove("modal__overlay--visible");
     modalContainer.querySelector(".modal__dialog").classList.remove("modal__dialog--visible");
-    toggleFixerBody();
+    //toggleFixerBody();
   };
+
+  const pressEscape = (event) => {
+    if (event.code == "Escape") {
+      const allModal = document.querySelectorAll(".modal");
+
+      allModal.forEach((itemModal) => {
+        event.preventDefault();
+        itemModal.querySelector(".modal__overlay").classList.remove("modal__overlay--visible");
+        itemModal.querySelector(".modal__dialog").classList.remove("modal__dialog--visible");
+        //toggleFixerBody();
+      });
+    }
+  };
+
+  document.onkeydown = pressEscape;
 };
 
 modalForm();
