@@ -23,7 +23,7 @@
     <header class="navbar navbar--mobile--fixed">
       <div class="container">
         <div class="navbar-top">
-          <a href="#" class="logo">
+          <a href="/tour-plan" class="logo">
             <img src="img/horizontal-logo.svg" alt="Logo: Best Tour Plan" class="logo__image" />
           </a>
           <form action="#" class="search navbar__search navbar__search--mobile--hidden">
@@ -467,7 +467,12 @@
         </h2>
         <form action="send.php" method="post" class="subscribe newsletter__subscribe">
           <input type="hidden" name="type" value="newsletter" />
-          <input type="text" class="subscribe__input" placeholder="Your email address" />
+          <input
+            type="text"
+            class="subscribe__input"
+            placeholder="Your email address"
+            name="email"
+          />
           <button class="subscribe__button">Send</button>
         </form>
       </div>

@@ -3,27 +3,55 @@
 require 'phpmailer/PHPMailer.php';
 require 'phpmailer/SMTP.php';
 require 'phpmailer/Exception.php';
-$secret = require('../../.smtp.php');
-//$secret = require('../../../.credital/.smtp.php');
+//$secret = require('../../.smtp.php');
+$secret = require('../../../.credital/.smtp.php');
 
 // Переменные, которые отправляет пользователь
-$type = $_POST['type'];
-$name = $_POST['name'];
-$phone = $_POST['phone'];
-$message = $_POST['message'];
+$type = (isset($_POST['type']) && !empty($_POST['type'])) ? htmlspecialchars($_POST['type']) : ''; 
+$name = (isset($_POST['name']) && !empty($_POST['name'])) ? htmlspecialchars($_POST['name']) : '';
+$phone = (isset($_POST['phone']) && !empty($_POST['phone'])) ? htmlspecialchars($_POST['phone']) : '';
+$email = (isset($_POST['email']) && !empty($_POST['email'])) ? htmlspecialchars($_POST['email']) : '';
+$message = (isset($_POST['message']) && !empty($_POST['message'])) ? htmlspecialchars($_POST['message']) : '';
 //$file = $_FILES['myfile'];
+switch ($type) {
+    case 'feedback':
+        $title = "Обратная связь Best Tour Plan";
+        $body = "
+            <h2>Новое обращение:</h2>
+            <b>Имя:</b> $name<br>
+            <b>Телефон:</b> $phone<br><br>
+            <b>Сообщение:</b><br>$message
+        ";
+        break;
+    case 'newsletter':
+        $title = "Подписка на новости Best Tour Plan";
+        $body = "
+            <h2>Новый запрос на подписку: </h2>
+            <b>Почта:</b> $email
+        ";
+        break;
+    case 'booking':
+        $title = "Бронирование Best Tour Plan";
+        $body = "
+            <h2>Новое бронирование:</h2>
+            <b>Имя:</b> $name<br>
+            <b>Телефон:</b> $phone<br>
+            <b>Почта:</b> $email<br><br>
+            <b>Сообщение:</b><br>$message
+        ";
+        break;
+    
+    default:
+        $title = "Какое-то сообщение Best Tour Plan";
+        $body = "
+            <h2>Неизвестный тип обращения:</h2>
+            <b>Имя:</b> $name<br>
+            <b>Телефон:</b> $phone<br>
+            <b>Почта:</b> $email<br><br>
+            <b>Сообщение:</b><br>$message
+        ";
+}
 
-// Формирование самого письма
-$title = "Новое обращение Best Tour Plan";
-$body = "
-<h2>Новое обращение</h2>
-<b>Имя:</b> $name<br>
-<b>Телефон:</b> $phone<br><br>
-<b>Сообщение:</b><br>$message
-";
-
-var_dump($type);
-die();
 // Настройки PHPMailer
 $mail = new PHPMailer\PHPMailer\PHPMailer();
 try {
@@ -73,5 +101,5 @@ try {
 }
 
 // Отображение результата
-echo json_encode(["result" => $result, "resultfile" => $rfile, "status" => $status]);
-//header('Location: thankyou.html');
+//echo json_encode(["result" => $result, "resultfile" => $rfile, "status" => $status]);
+header('Location: thankyou.html');
