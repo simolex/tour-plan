@@ -2070,6 +2070,16 @@ template {
           align-items: center;
 }
 
+.footer__contact-phone {
+  display: contents;
+  color: inherit;
+}
+
+.footer__contact-email {
+  display: contents;
+  color: inherit;
+}
+
 .footer__title {
   margin-top: 0;
   text-transform: uppercase;
