@@ -481,10 +481,11 @@
         <form action="send.php" method="post" class="subscribe newsletter__subscribe">
           <input type="hidden" name="type" value="newsletter" />
           <input
-            type="text"
+            type="email"
             class="subscribe__input"
             placeholder="Your email address"
             name="email"
+            required
           />
           <button class="subscribe__button">Send</button>
         </form>
@@ -784,12 +785,14 @@
                 class="input footer__input"
                 placeholder="Your Full Name*"
                 name="name"
+                required
               />
               <input
-                type="text"
+                type="tel"
                 class="input footer__input"
                 placeholder="Phone Number*"
                 name="phone"
+                required
               />
               <textarea
                 class="message footer__message"
