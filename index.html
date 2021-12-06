@@ -17,6 +17,10 @@
     <link rel="stylesheet" href="css/style.css" />
 
     <script src="js/swiper-bundle.min.js" defer></script>
+    <script src="js/jquery.core.min.js" defer></script>
+    <script src="js/jquery.validate.min.js" defer></script>
+    <script src="js/jquery.mask.min.js" defer></script>
+    <script src="js/validation.js" defer></script>
     <script src="js/main.js" defer></script>
     <script src="js/modal.js" defer></script>
   </head>
@@ -780,20 +784,24 @@
             <h3 class="footer__title footer__title--mb-32">Send us a message</h3>
             <form action="send.php" method="post" class="form footer__form">
               <input type="hidden" name="type" value="feedback" />
-              <input
-                type="text"
-                class="input footer__input"
-                placeholder="Your Full Name*"
-                name="name"
-                required
-              />
-              <input
-                type="tel"
-                class="input footer__input"
-                placeholder="Phone Number*"
-                name="phone"
-                required
-              />
+              <div class="footer__input-group">
+                <input
+                  type="text"
+                  class="input footer__input"
+                  placeholder="Your Full Name*"
+                  name="name"
+                  required
+                />
+              </div>
+              <div class="footer__input-group">
+                <input
+                  type="tel"
+                  class="input footer__input"
+                  placeholder="Phone Number*"
+                  name="phone"
+                  required
+                />
+              </div>
               <textarea
                 class="message footer__message"
                 placeholder="Message"
@@ -836,9 +844,28 @@
         <h3 class="modal__title">Booking</h3>
         <form action="send.php" method="post" class="form modal__form">
           <input type="hidden" name="type" value="booking" />
-          <input type="text" class="input modal__input" placeholder="Your Full Name*" name="name" />
-          <input type="text" class="input modal__input" placeholder="Phone Number*" name="phone" />
-          <input type="text" class="input modal__input" placeholder="Email*" name="email" />
+          <input
+            type="text"
+            class="input modal__input"
+            placeholder="Your Full Name*"
+            name="name"
+            minlength="2"
+            required
+          />
+          <input
+            type="tel"
+            class="input modal__input"
+            placeholder="Phone Number*"
+            name="phone"
+            required
+          />
+          <input
+            type="email"
+            class="input modal__input"
+            placeholder="Email*"
+            name="email"
+            required
+          />
           <textarea class="message modal__message" placeholder="Message" name="message"></textarea>
           <button class="button modal__button" type="submit">Send</button>
           <span class="modal__info">* Required Fields</span>
