@@ -14,10 +14,13 @@ const hotelSlider = new Swiper(".hotel-slider", {
   },
 });
 
+//Swiper.use([Navigation, Lazy]);
 const reviewsSlider = new Swiper(".reviews-slider", {
   // Optional parameters
   //direction: "vertical",
-  loop: true,
+  lazy: true,
+  loop: false,
+  watchSlidesProgress: true,
   //effect: "flip",
   // keyboard: {
   //   enabled: true,
@@ -28,7 +31,9 @@ const reviewsSlider = new Swiper(".reviews-slider", {
     nextEl: ".reviews-slider__button--next",
     prevEl: ".reviews-slider__button--prev",
   },
+  //preloadImages: false,
 });
+reviewsSlider.lazy.load();
 
 const buttonBurger = document.querySelector(".menu-burger");
 const menu = document.querySelector(".navbar-bottom");
