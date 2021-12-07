@@ -57,3 +57,5 @@ const unionSearchInputs = () => {
 };
 
 unionSearchInputs();
+
+AOS.init();

@@ -14,12 +14,14 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/aos.css" />
     <link rel="stylesheet" href="css/style.css" />
 
     <script src="js/swiper-bundle.min.js" defer></script>
     <script src="js/jquery.core.min.js" defer></script>
     <script src="js/jquery.validate.min.js" defer></script>
     <script src="js/jquery.mask.min.js" defer></script>
+    <script src="js/aos.js" defer></script>
     <script src="js/validation.js" defer></script>
     <script src="js/main.js" defer></script>
     <script src="js/modal.js" defer></script>
@@ -140,7 +142,7 @@
         </div>
         <!-- /.hotel-info -->
         <div class="hotel-grid">
-          <div class="swiper hotel-slider hotel__slider">
+          <div data-aos="fade-right" class="swiper hotel-slider hotel__slider">
             <div class="swiper-wrapper">
               <div class="swiper-slide hotel-slider__item">
                 <img
@@ -184,7 +186,7 @@
           </div>
           <!-- /.hotel-slider -->
           <div class="hotel-board">
-            <div class="booking">
+            <div data-aos="fade-left" class="booking">
               <div class="booking__info">
                 <div class="booking__price">
                   <span class="booking__start">price starts as</span>
@@ -218,7 +220,7 @@
               </button>
             </div>
             <!-- /.booking -->
-            <div class="map-viewport">
+            <div data-aos="fade-left" class="map-viewport">
               <iframe
                 class="map-viewport__frame"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63281.253839198354!2d79.79499280230297!3d7.5664353377695255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2c96110de8289%3A0x3fd7668bc2d85eb9!2sGrand%20Hilton%20Hotel!5e0!3m2!1sru!2sru!4v1637658701637!5m2!1sru!2sru"
@@ -238,7 +240,7 @@
       <div class="container">
         <h2 class="packages__title">Other Packages</h2>
         <div class="packages-wrapper">
-          <div class="card-sale card-sale--primary">
+          <div data-aos="fade-down-right" class="card-sale card-sale--primary">
             <div class="card-sale__preview">
               <img
                 src="img/other-packages/trip-package-main-1.jpg"
@@ -292,7 +294,7 @@
             </div>
           </div>
           <!-- /.card-sale -->
-          <div class="card-sale">
+          <div data-aos="fade-down-left" class="card-sale">
             <div class="card-sale__preview">
               <img
                 src="img/other-packages/trip-package-1.jpg"
@@ -333,7 +335,7 @@
             </div>
           </div>
           <!-- /.card-sale -->
-          <div class="card-sale">
+          <div data-aos="fade-up-right" class="card-sale">
             <div class="card-sale__preview">
               <img
                 src="img/other-packages/trip-package-2.jpg"
@@ -374,7 +376,7 @@
             </div>
           </div>
           <!-- /.card-sale -->
-          <div class="card-sale">
+          <div data-aos="fade-up" class="card-sale">
             <div class="card-sale__preview">
               <img
                 src="img/other-packages/trip-package-3.jpg"
@@ -415,7 +417,7 @@
             </div>
           </div>
           <!-- /.card-sale -->
-          <div class="card-sale">
+          <div data-aos="fade-up-left" class="card-sale">
             <div class="card-sale__preview">
               <img
                 src="img/other-packages/trip-package-4.jpg"
@@ -486,7 +488,7 @@
     </section>
     <!-- /.newsletter -->
     <section class="reviews">
-      <div class="container">
+      <div data-aos="flip-down" data-aos-offset="200" data-aos-duration="700" class="container">
         <h2 class="reviews__title">What people think about&nbsp;us</h2>
         <div class="swiper reviews-slider">
           <div class="swiper-wrapper">
@@ -572,7 +574,12 @@
       <div class="container">
         <h2 class="activities__title">Other Activities</h2>
         <div class="activities-wrapper">
-          <div class="card activities__card">
+          <div
+            data-aos="zoom-in"
+            data-aos-offset="50"
+            data-aos-easing="ease-in-sine"
+            class="card activities__card"
+          >
             <img
               src="img/other-activities/activity-1.jpg"
               alt="The curious corner of chamarel"
@@ -584,7 +591,12 @@
             </button>
           </div>
           <!-- /.card -->
-          <div class="card activities__card">
+          <div
+            data-aos="zoom-in"
+            data-aos-offset="100"
+            data-aos-easing="ease-in-sine"
+            class="card activities__card"
+          >
             <img
               src="img/other-activities/activity-2.jpg"
               alt="Gymkhana club golf course"
@@ -596,7 +608,12 @@
             </button>
           </div>
           <!-- /.card -->
-          <div class="card activities__card">
+          <div
+            data-aos="zoom-in"
+            data-aos-offset="150"
+            data-aos-easing="ease-in-sine"
+            class="card activities__card"
+          >
             <img
               src="img/other-activities/activity-3.jpg"
               alt="Tamarind falls hiking trip - full day"
@@ -608,7 +625,12 @@
             </button>
           </div>
           <!-- /.card -->
-          <div class="card activities__card">
+          <div
+            data-aos="zoom-in"
+            data-aos-offset="200"
+            data-aos-easing="ease-in-sine"
+            class="card activities__card"
+          >
             <img
               src="img/other-activities/activity-4.jpg"
               alt="The blue marine discovery quest"
