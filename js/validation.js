@@ -1,19 +1,31 @@
 $(document).ready(function () {
+  $.validator.addMethod(
+    "phoneGlo",
+    function (phone_number, element) {
+      return (
+        this.optional(element) || phone_number.match(/^(\+7\s\(\d{3}\)\s\d{3}\-\d{2}\-\d{2})$/)
+      );
+    },
+    "Please specify a valid phone number"
+  );
+
   $(".form").each(function () {
     $(this).validate({
-      errorClass: "invalid",
-      highlight: function (element, errorClass, validClass) {
-        $(element).addClass(errorClass).removeClass(validClass);
-        $(element.form)
-          .find("label[for=" + element.id + "]")
-          .addClass(errorClass);
+      rules: {
+        name: {
+          required: true,
+          minlength: 2,
+        },
+        phone: {
+          required: true,
+          phoneGlo: true,
+        },
+        email: {
+          required: true,
+          email: true,
+        },
       },
-      // unhighlight: function (element, errorClass, validClass) {
-      //   $(element).removeClass(errorClass).addClass(validClass);
-      //   $(element.form)
-      //     .find("label[for=" + element.id + "]")
-      //     .removeClass(errorClass);
-      // },
+      errorClass: "invalid__text",
       messages: {
         name: {
           required: "Please specify your name",
@@ -21,13 +33,86 @@ $(document).ready(function () {
         },
         phone: {
           required: "Phone number required",
-          phoneUS: "Your phone number must be in the format of (xxx)xxx-xx-xx",
+          phoneGlo: "Phone number format of +7 (xxx) xxx-xx-xx",
         },
         email: {
           required: "Email address required",
-          email: "Your email address must be in the format of name@domain.com",
+          email: "Email address format of name@domain.com",
         },
+      },
+      highlight: function (element, errorClass, validClass) {
+        if ($(element).parent().hasClass("subscribe")) {
+          $(element)
+            .closest(".subscribe")
+            .addClass("invalid__field-error")
+            .removeClass("invalid__field-valid");
+        } else {
+          $(element).addClass("invalid__field-error").removeClass("invalid__field-valid");
+        }
+
+        // $(element.form)
+        //   .find("label[for=" + element.id + "]")
+        //   .addClass(errorClass);
+      },
+      unhighlight: function (element, errorClass, validClass) {
+        if ($(element).parent().hasClass("subscribe")) {
+          $(element)
+            .closest(".subscribe")
+            .removeClass("invalid__field-error")
+            .addClass("invalid__field-valid");
+        } else {
+          $(element).removeClass("invalid__field-error").addClass("invalid__field-valid");
+        }
+      },
+      errorPlacement: function (error, element) {
+        if (element.parent().hasClass("subscribe") && element.attr("name") == "email") {
+          console.log();
+          element.closest(".subscribe__group").children(".invalid__text").remove();
+          error.addClass("invalid__text--position");
+          error.insertAfter(".subscribe");
+        } else {
+          error.insertAfter(element);
+        }
+      },
+      success: function (error) {
+        error.removeClass("error");
+        error.parent().removeClass("error");
       },
     });
   });
+  // $(".subscribe").each(function () {
+  //   $(this).validate({
+  //     rules: {
+  //       email: {
+  //         required: true,
+  //         email: true,
+  //       },
+  //     },
+  //     errorClass: "invalid__text",
+  //     messages: {
+  //       email: {
+  //         required: "Email address required",
+  //         email: "Your email address must be in the format of name@domain.com",
+  //       },
+  //     },
+  //     highlight: function (element, errorClass, validClass) {
+  //       $(element)
+  //         .closest(".subscribe")
+  //         .addClass("invalid__field-error")
+  //         .removeClass("invalid__field-valid");
+  //       // $(element.form)
+  //       //   .find("label[for=" + element.id + "]")
+  //       //   .addClass(errorClass);
+  //     },
+  //     unhighlight: function (element, errorClass, validClass) {
+  //       $(element)
+  //         .closest(".subscribe")
+  //         .removeClass("invalid__field-error")
+  //         .addClass("invalid__field-valid");
+  //       // $(element.form)
+  //       //   .find("label[for=" + element.id + "]")
+  //       //   .removeClass(errorClass);
+  //     },
+  //   });
+  // });
 });

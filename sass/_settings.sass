@@ -60,8 +60,23 @@ img
   justify-content: space-between
   flex-wrap: wrap
 .invalid
-  color: $primary
-  font-weight: 700
-  font-size: 12px
-  line-height: 15px
-  border: 1px solid lighten($primary, 0.1 )
+  &__field
+    &-error
+      position: relative
+      border: 1px solid lighten($primary, 0.1)
+    &-valid
+      position: relative
+      border: 1px solid lighten($text-color, 0.1)
+  &__text
+    position: unset
+    top: 100%
+    right: 0
+    color: $primary
+    background-color: $dark
+    font-weight: 700
+    font-size: 12px
+    line-height: 15px
+    &--position
+      position: absolute
+    
+

@@ -497,12 +497,29 @@ img {
       flex-wrap: wrap;
 }
 
-.invalid {
+.invalid__field-error {
+  position: relative;
+  border: 1px solid #ec1f46;
+}
+
+.invalid__field-valid {
+  position: relative;
+  border: 1px solid #333333;
+}
+
+.invalid__text {
+  position: unset;
+  top: 100%;
+  right: 0;
   color: #EC1F46;
+  background-color: #0A223D;
   font-weight: 700;
   font-size: 12px;
   line-height: 15px;
-  border: 1px solid #ec1f46;
+}
+
+.invalid__text--position {
+  position: absolute;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -2826,6 +2843,9 @@ template {
     margin-top: 37px;
   }
   .subscribe {
+    width: 100%;
+  }
+  .subscribe__group {
     width: 100%;
   }
   .reviews {
