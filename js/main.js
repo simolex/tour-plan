@@ -1,10 +1,12 @@
 const hotelSlider = new Swiper(".hotel-slider", {
   loop: true,
+  lazy: true,
 
   keyboard: {
     enabled: true,
     onlyInViewport: true,
   },
+
   navigation: {
     nextEl: ".hotel-slider__button--next",
     prevEl: ".hotel-slider__button--prev",
@@ -13,6 +15,7 @@ const hotelSlider = new Swiper(".hotel-slider", {
 
 const reviewsSlider = new Swiper(".reviews-slider", {
   loop: true,
+
   navigation: {
     nextEl: ".reviews-slider__button--next",
     prevEl: ".reviews-slider__button--prev",
