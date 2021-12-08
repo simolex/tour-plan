@@ -1,39 +1,26 @@
 const hotelSlider = new Swiper(".hotel-slider", {
-  // Optional parameters
-  //direction: "vertical",
   loop: true,
-  //effect: "flip",
+  lazy: true,
+
   keyboard: {
     enabled: true,
     onlyInViewport: true,
   },
-  // Navigation arrows
+
   navigation: {
     nextEl: ".hotel-slider__button--next",
     prevEl: ".hotel-slider__button--prev",
   },
 });
 
-//Swiper.use([Navigation, Lazy]);
 const reviewsSlider = new Swiper(".reviews-slider", {
-  // Optional parameters
-  //direction: "vertical",
-  lazy: true,
-  loop: false,
-  watchSlidesProgress: true,
-  //effect: "flip",
-  // keyboard: {
-  //   enabled: true,
-  //   onlyInViewport: true,
-  // },
-  // Navigation arrows
+  loop: true,
+
   navigation: {
     nextEl: ".reviews-slider__button--next",
     prevEl: ".reviews-slider__button--prev",
   },
-  //preloadImages: false,
 });
-reviewsSlider.lazy.load();
 
 const buttonBurger = document.querySelector(".menu-burger");
 const menu = document.querySelector(".navbar-bottom");
