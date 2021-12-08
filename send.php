@@ -3,8 +3,8 @@
 require 'phpmailer/PHPMailer.php';
 require 'phpmailer/SMTP.php';
 require 'phpmailer/Exception.php';
-$secret = require('../../.smtp.php');
-//$secret = require('../../../.credital/.smtp.php');
+//$secret = require('../../.smtp.php');
+$secret = require('../../../.credital/.smtp.php');
 
 // Переменные, которые отправляет пользователь
 $type = (isset($_POST['type']) && !empty($_POST['type'])) ? htmlspecialchars($_POST['type']) : ''; 
@@ -71,21 +71,6 @@ try {
 
     // Получатель письма
     $mail->addAddress($secret['post_address']);  
-    //$mail->addAddress('youremail@gmail.com'); // Ещё один, если нужен
-
-    // Прикрипление файлов к письму
-    // if (!empty($file['name'][0])) {
-    //     for ($ct = 0; $ct < count($file['tmp_name']); $ct++) {
-    //         $uploadfile = tempnam(sys_get_temp_dir(), sha1($file['name'][$ct]));
-    //         $filename = $file['name'][$ct];
-    //         if (move_uploaded_file($file['tmp_name'][$ct], $uploadfile)) {
-    //             $mail->addAttachment($uploadfile, $filename);
-    //             $rfile[] = "Файл $filename прикреплён";
-    //         } else {
-    //             $rfile[] = "Не удалось прикрепить файл $filename";
-    //         }
-    //     }   
-    // }
     // Отправка сообщения
     $mail->isHTML(true);
     $mail->Subject = $title;

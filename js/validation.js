@@ -49,10 +49,6 @@ $(document).ready(function () {
         } else {
           $(element).addClass("invalid__field-error").removeClass("invalid__field-valid");
         }
-
-        // $(element.form)
-        //   .find("label[for=" + element.id + "]")
-        //   .addClass(errorClass);
       },
       unhighlight: function (element, errorClass, validClass) {
         if ($(element).parent().hasClass("subscribe")) {
@@ -67,7 +63,7 @@ $(document).ready(function () {
       errorPlacement: function (error, element) {
         if (element.parent().hasClass("subscribe") && element.attr("name") == "email") {
           console.log();
-          element.closest(".subscribe__group").children(".invalid__text").remove();
+          element.closest(".newsletter__group").children(".invalid__text").remove();
           error.addClass("invalid__text--position");
           error.insertAfter(".subscribe");
         } else {
@@ -80,39 +76,4 @@ $(document).ready(function () {
       },
     });
   });
-  // $(".subscribe").each(function () {
-  //   $(this).validate({
-  //     rules: {
-  //       email: {
-  //         required: true,
-  //         email: true,
-  //       },
-  //     },
-  //     errorClass: "invalid__text",
-  //     messages: {
-  //       email: {
-  //         required: "Email address required",
-  //         email: "Your email address must be in the format of name@domain.com",
-  //       },
-  //     },
-  //     highlight: function (element, errorClass, validClass) {
-  //       $(element)
-  //         .closest(".subscribe")
-  //         .addClass("invalid__field-error")
-  //         .removeClass("invalid__field-valid");
-  //       // $(element.form)
-  //       //   .find("label[for=" + element.id + "]")
-  //       //   .addClass(errorClass);
-  //     },
-  //     unhighlight: function (element, errorClass, validClass) {
-  //       $(element)
-  //         .closest(".subscribe")
-  //         .removeClass("invalid__field-error")
-  //         .addClass("invalid__field-valid");
-  //       // $(element.form)
-  //       //   .find("label[for=" + element.id + "]")
-  //       //   .removeClass(errorClass);
-  //     },
-  //   });
-  // });
 });
