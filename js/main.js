@@ -52,7 +52,7 @@ unionSearchInputs();
 
 const activateFakeMap = () => {
   const mapViewport = document.querySelector(".map-viewport");
-  const startMap = () => {
+  const loadMap = () => {
     mapViewport.innerHTML = `
       <iframe
         class="map-viewport__frame"
@@ -62,10 +62,12 @@ const activateFakeMap = () => {
         >
       </iframe>
       `;
-    mapViewport.removeEventListener("click", startMap);
+    mapViewport.removeEventListener("click", loadMap);
+    mapViewport.removeEventListener("drag", loadMap);
   };
 
-  mapViewport.addEventListener("click", startMap);
+  mapViewport.addEventListener("click", loadMap);
+  mapViewport.addEventListener("drag", loadMap);
 };
 
 activateFakeMap();

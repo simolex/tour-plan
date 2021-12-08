@@ -1340,7 +1340,8 @@ template {
 }
 
 .map-viewport {
-  cursor: pointer;
+  cursor: -webkit-grab;
+  cursor: grab;
   width: 350px;
   height: 213px;
   border-radius: 10px;
