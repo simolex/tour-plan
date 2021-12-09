@@ -64,10 +64,12 @@ const activateFakeMap = () => {
       `;
     mapViewport.removeEventListener("click", loadMap);
     mapViewport.removeEventListener("drag", loadMap);
+    mapViewport.removeEventListener("mouseover", loadMap);
   };
 
   mapViewport.addEventListener("click", loadMap);
   mapViewport.addEventListener("drag", loadMap);
+  mapViewport.addEventListener("mouseover", loadMap);
 };
 
 activateFakeMap();
