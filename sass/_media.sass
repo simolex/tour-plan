@@ -86,7 +86,7 @@
     padding-bottom: 33px
     &-wrapper
       grid-template-columns: repeat(3, minmax(min-content, 1fr)) 40px 150px
-      grid-auto-rows: minmax(30px, min-content)
+      grid-auto-rows: minmax(29px, min-content)
       grid-gap: 10px
     &__title
       &--inline
@@ -133,6 +133,7 @@
         padding-left: 7px
       &--bottom
         padding: 0 2px
+        margin-bottom: 0
     &__bottom
       &-links
         grid-row: 9
@@ -142,21 +143,9 @@
       &-image
         grid-row: 9
         grid-column: 5 / span 1
+        margin-bottom: 0
 
-@media ( max-height: 487px )
-  .modal
-    &__dialog
-      border-radius: 4px
-      min-height: 0
-      height: 100vh
-      overflow-y: auto
-      overscroll-behavior: contain
-      -ms-overflow-style: none
-      scrollbar-width: none
-      &::-webkit-scrollbar
-        display: none
-
-@media ( max-width: 768px )
+@media ( max-width: 767px )
   .container
     max-width: 576px
     width: 90%
@@ -475,7 +464,7 @@
       &:nth-child(1)
         order: 1
       &:nth-child(2)
-        order: 3       
+        order: 3
       &:nth-child(3)
         order: 2
         margin-bottom: 28px
@@ -519,7 +508,6 @@
         &-wrapper
           min-width: 27px
       &-form
-        //flex-direction: column
         grid-row: 7
         grid-column: 1/2
         &--ml-5
@@ -560,3 +548,17 @@
     &__dialog
       padding: 33px 20px
       max-width: 320px
+
+//responsive for small Horizontal device
+@media ( max-height: 487px )
+  .modal
+    &__dialog
+      border-radius: 4px
+      min-height: 0
+      height: 100vh
+      overflow-y: auto
+      overscroll-behavior: contain
+      -ms-overflow-style: none
+      scrollbar-width: none
+      &::-webkit-scrollbar
+        display: none
