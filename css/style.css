@@ -2258,6 +2258,11 @@ template {
   font-style: normal;
 }
 
+.modal__button {
+  min-width: 160px;
+  min-height: 50px;
+}
+
 .modal__overlay {
   position: fixed;
   top: 0;
