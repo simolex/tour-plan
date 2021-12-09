@@ -985,6 +985,10 @@ template {
   height: 100%;
 }
 
+.search__icon {
+  fill: #fff;
+}
+
 .user {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3183,7 +3187,7 @@ template {
 @media (hover) {
   .button:hover {
     color: #EC1F46;
-    background: #0A223D;
+    background: #F5FAFE;
     -webkit-box-shadow: -1px -1px 5px 0px #EC1F46, 7px 7px 20px 0px #0A223D, 4px 4px 5px 0px #0A223D;
             box-shadow: -1px -1px 5px 0px #EC1F46, 7px 7px 20px 0px #0A223D, 4px 4px 5px 0px #0A223D;
   }
