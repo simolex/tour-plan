@@ -1,4 +1,23 @@
 @media ( hover ), ( min-width: 992px )
+  .navbar
+    &-menu
+      &__link
+        position: relative
+        &:hover
+          &::before
+            right: -5%
+            left: -5%
+            width: 110%
+            transition: 200ms ease all
+        &::before
+          content: ''
+          position: absolute
+          left: 50%
+          bottom: -20%
+          height: 2px
+          width: 0
+          background: $primary
+          transition: 500ms ease all      
   .button
     &:hover
       color: $primary

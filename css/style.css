@@ -3260,6 +3260,27 @@ template {
 }
 
 @media (hover), (min-width: 992px) {
+  .navbar-menu__link {
+    position: relative;
+  }
+  .navbar-menu__link:hover::before {
+    right: -5%;
+    left: -5%;
+    width: 110%;
+    -webkit-transition: 200ms ease all;
+    transition: 200ms ease all;
+  }
+  .navbar-menu__link::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -20%;
+    height: 2px;
+    width: 0;
+    background: #EC1F46;
+    -webkit-transition: 500ms ease all;
+    transition: 500ms ease all;
+  }
   .button:hover {
     color: #EC1F46;
     background: #0A223D;
