@@ -597,11 +597,11 @@
                   <h3 class="reviews-slider__username">Megan Fox</h3>
                   <span class="reviews-slider__date">Stayed 18 Nov, 2019</span>
                   <div class="reviews-slider__rating">
-                    <img src="img/star.svg" alt="star" />
-                    <img src="img/star.svg" alt="star" />
-                    <img src="img/star.svg" alt="star" />
-                    <img src="img/star.svg" alt="star" />
-                    <img src="img/star.svg" alt="star" />
+                    <svg class="stars__once"><use xlink:href="img/common.svg#star"></use></svg>
+                    <svg class="stars__once"><use xlink:href="img/common.svg#star"></use></svg>
+                    <svg class="stars__once"><use xlink:href="img/common.svg#star"></use></svg>
+                    <svg class="stars__once"><use xlink:href="img/common.svg#star"></use></svg>
+                    <svg class="stars__once"><use xlink:href="img/common.svg#star"></use></svg>
                   </div>
                   <!-- /.reviews-slider__rating -->
                 </div>
@@ -656,8 +656,18 @@
             <!-- /.swiper-slide -->
           </div>
           <!-- /.swiper-wrapper -->
-          <button class="reviews-slider__button reviews-slider__button--prev"></button>
-          <button class="reviews-slider__button reviews-slider__button--next"></button>
+          <button class="reviews-slider__button reviews-slider__button--prev">
+            <svg class="reviews-slider__arrow">
+              <title>Arrow previous</title>
+              <use xlink:href="img/common.svg#arrow"></use>
+            </svg>
+          </button>
+          <button class="reviews-slider__button reviews-slider__button--next">
+            <svg class="reviews-slider__arrow">
+              <title>Arrow next</title>
+              <use xlink:href="img/common.svg#arrow" transform="rotate(-180 5 9)"></use>
+            </svg>
+          </button>
         </div>
         <!-- /.reviews-slider -->
       </div>

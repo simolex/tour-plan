@@ -1822,6 +1822,12 @@ template {
   right: 62px;
 }
 
+.reviews-slider__arrow {
+  width: 10px;
+  height: 18px;
+  z-index: 99;
+}
+
 .reviews-slider__button {
   cursor: pointer;
   position: absolute;
@@ -1831,11 +1837,9 @@ template {
   width: 30px;
   height: 30px;
   border: none;
-  z-index: 99;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 10px;
+  z-index: 98;
   background-color: transparent;
+  fill: #828282;
 }
 
 .reviews-slider__button:focus-visible {
@@ -1844,12 +1848,10 @@ template {
 
 .reviews-slider__button--next {
   right: 18px;
-  background-image: url("../img/reviews-arrow-next.svg");
 }
 
 .reviews-slider__button--prev {
   left: 18px;
-  background-image: url("../img/reviews-arrow-prev.svg");
 }
 
 .reviews-slider__profile {
@@ -3270,6 +3272,11 @@ template {
 .hotel-slider__button:hover {
   fill: #EC1F46;
   fill-opacity: 0.7;
+}
+
+.reviews-slider__button:hover {
+  fill: #EC1F46;
+  fill-opacity: 0.9;
 }
 
 @media (max-width: 1200px) {
