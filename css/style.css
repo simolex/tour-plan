@@ -3259,7 +3259,7 @@ template {
   }
 }
 
-@media (hover) {
+@media (hover), (min-width: 992px) {
   .button:hover {
     color: #EC1F46;
     background: #0A223D;
