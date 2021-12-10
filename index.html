@@ -119,11 +119,11 @@
           <div class="hotel-info__about">
             <div class="hotel-wrapper">
               <div class="stars hotel-info__stars">
-                <img src="img/star.svg" alt="star" />
-                <img src="img/star.svg" alt="star" />
-                <img src="img/star.svg" alt="star" />
-                <img src="img/star.svg" alt="star" />
-                <img src="img/star.svg" alt="star" />
+                <svg class="stars__once"><use xlink:href="img/common.svg#star"></use></svg>
+                <svg class="stars__once"><use xlink:href="img/common.svg#star"></use></svg>
+                <svg class="stars__once"><use xlink:href="img/common.svg#star"></use></svg>
+                <svg class="stars__once"><use xlink:href="img/common.svg#star"></use></svg>
+                <svg class="stars__once"><use xlink:href="img/common.svg#star"></use></svg>
               </div>
               <h1 class="hotel-info__title">Grand Hilton Hotel</h1>
               <span class="offer hotel-info__offer">Flash Offer</span>
@@ -191,8 +191,18 @@
               </div>
             </div>
             <!-- /.swiper-wrapper -->
-            <button class="hotel-slider__button hotel-slider__button--prev"></button>
-            <button class="hotel-slider__button hotel-slider__button--next"></button>
+            <button class="hotel-slider__button hotel-slider__button--prev">
+              <svg class="hotel-slider__arrow">
+                <title>Arrow previous</title>
+                <use xlink:href="img/common.svg#arrow"></use>
+              </svg>
+            </button>
+            <button class="hotel-slider__button hotel-slider__button--next">
+              <svg class="hotel-slider__arrow">
+                <title>Arrow next</title>
+                <use xlink:href="img/common.svg#arrow" transform="rotate(-180 5 9)"></use>
+              </svg>
+            </button>
           </div>
           <!-- /.hotel-slider -->
           <div class="hotel-board">
@@ -206,11 +216,11 @@
                 <!-- /.booking__price -->
                 <div class="booking__room">
                   <div class="booking__text">
-                    <img src="img/user.svg" alt="Icon: Guest" class="booking__icon" />
+                    <svg class="booking__icon"><use xlink:href="img/common.svg#user"></use></svg>
                     <span class="booking__factor">2 x Guests</span>
                   </div>
                   <div class="booking__text">
-                    <img src="img/home.svg" alt="Icon: Room" class="booking__icon" />
+                    <svg class="booking__icon"><use xlink:href="img/common.svg#home"></use></svg>
                     <span class="booking__factor">1 x Room</span>
                   </div>
                 </div>
@@ -220,7 +230,7 @@
               <div class="booking__phone-call">
                 <span class="booking__quick">Quick Booking</span>
                 <a class="booking__phone-number" href="tel:12100">
-                  <img src="img/phone-call.svg" alt="Icon: Phone Call" class="booking__icon" />
+                  <svg class="booking__icon"><use xlink:href="img/common.svg#phone"></use></svg>
                   <span class="booking__phone-display">12100</span>
                 </a>
               </div>
@@ -266,11 +276,11 @@
               <div class="card-sale__content card-sale__content--primary">
                 <div class="card-sale__up-side">
                   <div class="stars card-sale__stars">
-                    <img src="img/star.svg" alt="star" />
-                    <img src="img/star.svg" alt="star" />
-                    <img src="img/star.svg" alt="star" />
-                    <img src="img/star.svg" alt="star" />
-                    <img src="img/star.svg" alt="star" />
+                    <svg class="stars__once"><use xlink:href="img/common.svg#star"></use></svg>
+                    <svg class="stars__once"><use xlink:href="img/common.svg#star"></use></svg>
+                    <svg class="stars__once"><use xlink:href="img/common.svg#star"></use></svg>
+                    <svg class="stars__once"><use xlink:href="img/common.svg#star"></use></svg>
+                    <svg class="stars__once"><use xlink:href="img/common.svg#star"></use></svg>
                   </div>
                   <h3 class="card-sale__hotel-name">Hotel Blue Haven</h3>
                 </div>
@@ -283,15 +293,22 @@
                   </p>
                   <div class="book-room card-sale__room">
                     <div class="book-room__text">
-                      <img src="img/map-pin.svg" alt="Icon: Address" class="book-room__icon" />
+                      <svg class="book-room__icon">
+                        <title>Icon: Address</title>
+                        <use xlink:href="img/common.svg#map-pin"></use>
+                      </svg>
                       <span class="book-room__factor">1749 Wheeler Ridge Delaware</span>
                     </div>
                     <div class="book-room__text">
-                      <img src="img/user.svg" alt="Icon: Guest" class="book-room__icon" />
+                      <svg class="book-room__icon">
+                        <use xlink:href="img/common.svg#user"></use>
+                      </svg>
                       <span class="book-room__factor">2 x Guests</span>
                     </div>
                     <div class="book-room__text">
-                      <img src="img/home.svg" alt="Icon: Room" class="book-room__icon" />
+                      <svg class="book-room__icon">
+                        <use xlink:href="img/common.svg#home"></use>
+                      </svg>
                       <span class="book-room__factor">1 x Room</span>
                     </div>
                   </div>
@@ -332,15 +349,22 @@
                 <div class="card-sale__body">
                   <div class="book-room card-sale__room">
                     <div class="book-room__text">
-                      <img src="img/map-pin.svg" alt="Icon: Address" class="book-room__icon" />
+                      <svg class="book-room__icon">
+                        <title>Icon: Address</title>
+                        <use xlink:href="img/common.svg#map-pin"></use>
+                      </svg>
                       <span class="book-room__factor">1749 Wheeler Ridge Delaware</span>
                     </div>
                     <div class="book-room__text">
-                      <img src="img/user.svg" alt="Icon: Guest" class="book-room__icon" />
+                      <svg class="book-room__icon">
+                        <use xlink:href="img/common.svg#user"></use>
+                      </svg>
                       <span class="book-room__factor">2 x Guests</span>
                     </div>
                     <div class="book-room__text">
-                      <img src="img/home.svg" alt="Icon: Room" class="book-room__icon" />
+                      <svg class="book-room__icon">
+                        <use xlink:href="img/common.svg#home"></use>
+                      </svg>
                       <span class="book-room__factor">1 x Room</span>
                     </div>
                   </div>
@@ -381,15 +405,22 @@
                 <div class="card-sale__body">
                   <div class="book-room card-sale__room">
                     <div class="book-room__text">
-                      <img src="img/map-pin.svg" alt="Icon: Address" class="book-room__icon" />
+                      <svg class="book-room__icon">
+                        <title>Icon: Address</title>
+                        <use xlink:href="img/common.svg#map-pin"></use>
+                      </svg>
                       <span class="book-room__factor">1749 Wheeler Ridge Delaware</span>
                     </div>
                     <div class="book-room__text">
-                      <img src="img/user.svg" alt="Icon: Guest" class="book-room__icon" />
+                      <svg class="book-room__icon">
+                        <use xlink:href="img/common.svg#user"></use>
+                      </svg>
                       <span class="book-room__factor">2 x Guests</span>
                     </div>
                     <div class="book-room__text">
-                      <img src="img/home.svg" alt="Icon: Room" class="book-room__icon" />
+                      <svg class="book-room__icon">
+                        <use xlink:href="img/common.svg#home"></use>
+                      </svg>
                       <span class="book-room__factor">1 x Room</span>
                     </div>
                   </div>
@@ -430,15 +461,22 @@
                 <div class="card-sale__body">
                   <div class="book-room card-sale__room">
                     <div class="book-room__text">
-                      <img src="img/map-pin.svg" alt="Icon: Address" class="book-room__icon" />
+                      <svg class="book-room__icon">
+                        <title>Icon: Address</title>
+                        <use xlink:href="img/common.svg#map-pin"></use>
+                      </svg>
                       <span class="book-room__factor">1749 Wheeler Ridge Delaware</span>
                     </div>
                     <div class="book-room__text">
-                      <img src="img/user.svg" alt="Icon: Guest" class="book-room__icon" />
+                      <svg class="book-room__icon">
+                        <use xlink:href="img/common.svg#user"></use>
+                      </svg>
                       <span class="book-room__factor">2 x Guests</span>
                     </div>
                     <div class="book-room__text">
-                      <img src="img/home.svg" alt="Icon: Room" class="book-room__icon" />
+                      <svg class="book-room__icon">
+                        <use xlink:href="img/common.svg#home"></use>
+                      </svg>
                       <span class="book-room__factor">1 x Room</span>
                     </div>
                   </div>
@@ -479,15 +517,22 @@
                 <div class="card-sale__body">
                   <div class="book-room card-sale__room">
                     <div class="book-room__text">
-                      <img src="img/map-pin.svg" alt="Icon: Address" class="book-room__icon" />
+                      <svg class="book-room__icon">
+                        <title>Icon: Address</title>
+                        <use xlink:href="img/common.svg#map-pin"></use>
+                      </svg>
                       <span class="book-room__factor">1749 Wheeler Ridge Delaware</span>
                     </div>
                     <div class="book-room__text">
-                      <img src="img/user.svg" alt="Icon: Guest" class="book-room__icon" />
+                      <svg class="book-room__icon">
+                        <use xlink:href="img/common.svg#user"></use>
+                      </svg>
                       <span class="book-room__factor">2 x Guests</span>
                     </div>
                     <div class="book-room__text">
-                      <img src="img/home.svg" alt="Icon: Room" class="book-room__icon" />
+                      <svg class="book-room__icon">
+                        <use xlink:href="img/common.svg#home"></use>
+                      </svg>
                       <span class="book-room__factor">1 x Room</span>
                     </div>
                   </div>
