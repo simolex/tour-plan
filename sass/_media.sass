@@ -424,8 +424,10 @@
         justify-self: center
   .modal
     &__dialog
-      padding: 33px 55px
+      //min-width: 412px
       max-width: 412px
+      &-content
+        padding: 33px 55px
 @media ( max-width: 420px )
   .container,
   .newsletter-container
@@ -554,8 +556,15 @@
       margin-bottom: 15px
   .modal
     &__dialog
-      padding: 33px 20px
-      max-width: 300px
+      max-width: 280px
+      &-content
+        padding: 33px 20px
+    &__button
+      width: 100%
+      order: 2
+    &__info
+      display: inline-block
+      margin-bottom: 15px
 
 //responsive for small Horizontal device
 @media ( max-height: 487px )
@@ -563,10 +572,13 @@
     &__dialog
       border-radius: 4px
       min-height: 0
-      height: 94%
+      height: 90%
       overflow-y: auto
       overscroll-behavior: contain
       -ms-overflow-style: none
       scrollbar-width: none
+      &-content
+        min-height: 517px
       &::-webkit-scrollbar
         display: none
+        
